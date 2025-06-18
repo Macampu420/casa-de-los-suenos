@@ -1,0 +1,20 @@
+<nav class="bg-[#F28B26] h-[50px] fixed bottom-0 left-0 right-0">
+  <img 
+    src="/images/logo.svg" 
+    alt="logo"
+    class="absolute right-4 top-[-50%] h-[75px] w-auto cursor-pointer" 
+  />
+</nav>
+
+<script>
+  // Client-side JavaScript
+  document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('img[alt="logo"]');
+    if (logo) {
+      logo.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+

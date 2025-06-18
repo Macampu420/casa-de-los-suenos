@@ -1,16 +1,26 @@
 ---
-
+import "../styles/global.css";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Nav from "../components/nav.astro";
+import Main from "../components/main.astro";
+import About from "../components/about.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-[#FFFDEA] min-h-[100px] relative pb-[50px] flex justify-center">
+    <div class="flex flex-col justify-between max-w-[390px] items-center relative">
+      <Header />
+      <About />
+      <!-- <Footer /> -->
+      <Nav />
+    </div>
+  </body>
 </html>

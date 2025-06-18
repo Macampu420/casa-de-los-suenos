@@ -1,0 +1,79 @@
+---
+const imagePaths = [
+  '/images/carrousel_1.png',
+  '/images/carrousel_2.png',
+  '/images/carrousel_3.png',
+  '/images/carrousel_4.png'
+];
+const shuffledPaths = [...imagePaths].sort(() => Math.random() - 0.5);
+---
+
+<section class="w-full overflow-x-scroll mt-[30px] scrollbar-hide" id="carousel">
+  <div class="flex gap-4 p-4 px-0">
+    {shuffledPaths.map((path) => (
+      <div class="flex-shrink-0 w-[255px] h-[170px]">
+        <img
+          src={path}
+          alt="Carousel image"
+          width="255"
+          height="170"
+          class="rounded-[20px] object-cover w-full h-full pointer-events-none"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+</style>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carousel.style.cursor = 'grabbing';
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2;
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+
+  // Set initial cursor style
+  carousel.style.cursor = 'grab';
+</script>
