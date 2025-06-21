@@ -1,0 +1,101 @@
+---
+import "../styles/global.css";
+import Heading from '../components/ui/text/heading.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Heading Component Examples</title>
+  </head>
+  <body class="bg-[#FFFDEA] min-h-screen">
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+      <Heading variant="h1" color="primary" align="center" class="mb-8">
+        Heading Component Examples
+      </Heading>
+
+      <section class="space-y-8">
+        <!-- Different variants -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Different Variants</Heading>
+          <div class="space-y-2">
+            <Heading variant="h1" font="kenyan">H1 - Kenyan Coffee Font</Heading>
+            <Heading variant="h2" font="fredoka">H2 - Fredoka Font</Heading>
+            <Heading variant="h3">H3 - Default Font</Heading>
+            <Heading variant="h4">H4 - Smaller Heading</Heading>
+            <Heading variant="h5">H5 - Even Smaller</Heading>
+            <Heading variant="h6">H6 - Smallest Heading</Heading>
+          </div>
+        </div>
+
+        <!-- Different colors -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Different Colors</Heading>
+          <div class="space-y-2">
+            <Heading variant="h3" color="primary">Primary Color</Heading>
+            <Heading variant="h3" color="secondary">Secondary Color</Heading>
+            <Heading variant="h3" color="accent">Accent Color</Heading>
+            <Heading variant="h3" color="dark">Dark Color</Heading>
+            <Heading variant="h3" color="light">Light Color</Heading>
+          </div>
+        </div>
+
+        <!-- Different sizes -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Different Sizes</Heading>
+          <div class="space-y-2">
+            <Heading variant="h1" size="xs">Extra Small Text</Heading>
+            <Heading variant="h1" size="sm">Small Text</Heading>
+            <Heading variant="h1" size="base">Base Text</Heading>
+            <Heading variant="h1" size="lg">Large Text</Heading>
+            <Heading variant="h1" size="xl">Extra Large Text</Heading>
+            <Heading variant="h1" size="2xl">2XL Text</Heading>
+            <Heading variant="h1" size="3xl">3XL Text</Heading>
+            <Heading variant="h1" size="4xl">4XL Text</Heading>
+          </div>
+        </div>
+
+        <!-- Different weights -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Different Weights</Heading>
+          <div class="space-y-2">
+            <Heading variant="h3" weight="light">Light Weight</Heading>
+            <Heading variant="h3" weight="normal">Normal Weight</Heading>
+            <Heading variant="h3" weight="medium">Medium Weight</Heading>
+            <Heading variant="h3" weight="semibold">Semibold Weight</Heading>
+            <Heading variant="h3" weight="bold">Bold Weight</Heading>
+            <Heading variant="h3" weight="extrabold">Extrabold Weight</Heading>
+          </div>
+        </div>
+
+        <!-- Different alignments -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Different Alignments</Heading>
+          <div class="space-y-2">
+            <Heading variant="h3" align="left">Left Aligned Text</Heading>
+            <Heading variant="h3" align="center">Center Aligned Text</Heading>
+            <Heading variant="h3" align="right">Right Aligned Text</Heading>
+          </div>
+        </div>
+
+        <!-- Custom styling example -->
+        <div>
+          <Heading variant="h2" color="secondary" class="mb-4">Custom Styling</Heading>
+          <Heading 
+            variant="h3" 
+            color="primary" 
+            font="kenyan" 
+            weight="bold" 
+            align="center"
+            class="bg-amber-100 p-4 rounded-lg shadow-md"
+          >
+            Custom Styled Heading with Background
+          </Heading>
+        </div>
+      </section>
+    </main>
+  </body>
+</html> 

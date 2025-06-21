@@ -1,0 +1,78 @@
+---
+
+type Variant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export interface Props {
+  variant?: Variant;
+  customClass?: string;
+}
+
+const { variant = "h1", customClass = "" } = Astro.props;
+
+
+// Size classes
+const sizeClasses: Record<Variant, string> = {
+  h1: "text-6xl",
+  h2: "text-5xl",
+  h3: "text-4xl",
+  h4: "text-3xl",
+  h5: "text-2xl",
+  h6: "text-xl",
+};
+
+const defaultClasses = "font-kenyan text-primary";
+const finalSize = sizeClasses[variant];
+
+// Build the class string
+const classes = [defaultClasses, finalSize, customClass]
+  .filter(Boolean)
+  .join(" ");
+---
+
+{
+  (() => {
+    switch (variant) {
+      case "h1":
+        return (
+          <h1 class={classes}>
+            <slot />
+          </h1>
+        );
+      case "h2":
+        return (
+          <h2 class={classes}>
+            <slot />
+          </h2>
+        );
+      case "h3":
+        return (
+          <h3 class={classes}>
+            <slot />
+          </h3>
+        );
+      case "h4":
+        return (
+          <h4 class={classes}>
+            <slot />
+          </h4>
+        );
+      case "h5":
+        return (
+          <h5 class={classes}>
+            <slot />
+          </h5>
+        );
+      case "h6":
+        return (
+          <h6 class={classes}>
+            <slot />
+          </h6>
+        );
+      default:
+        return (
+          <h1 class={classes}>
+            <slot />
+          </h1>
+        );
+    }
+  })()
+}
