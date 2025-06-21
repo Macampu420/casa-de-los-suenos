@@ -8,8 +8,8 @@ const imagePaths = [
 const shuffledPaths = [...imagePaths].sort(() => Math.random() - 0.5);
 ---
 
-<section class="w-full overflow-x-scroll mt-[30px] scrollbar-hide" id="carousel">
-  <div class="flex gap-4 p-4 px-0">
+<section class="w-full overflow-x-scroll my-6 scrollbar-hide" id="carousel">
+  <div class="flex gap-4">
     {shuffledPaths.map((path) => (
       <div class="flex-shrink-0 w-[255px] h-[170px]">
         <img

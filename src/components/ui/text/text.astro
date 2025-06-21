@@ -1,0 +1,28 @@
+---
+
+type Variant = "regular" | "bold";
+export interface Props {
+  variant?: Variant;
+  customClass?: string;
+}
+
+const { variant = "regular", customClass = "" } = Astro.props;
+
+// Weight classes
+const weightClasses: Record<Variant, string> = {
+  regular: "font-normal",
+  bold: "font-bold",
+};
+
+const defaultClasses = "font-fredoka text-primary text-xl leading-[1]";
+const finalWeight = weightClasses[variant];
+
+// Build the class string
+const classes = [defaultClasses, finalWeight, customClass]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<p class={classes}>
+  <slot />
+</p>

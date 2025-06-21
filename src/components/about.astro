@@ -1,22 +1,29 @@
 ---
-import AboutSlider from './about_slider.astro';
+import AboutSlider from "./about_slider.astro";
+import Heading from "./ui/text/heading.astro";
+import Text from "./ui/text/text.astro";
 ---
 
 <section class="w-full">
   <div class="w-full p-6">
-    <h2 class="text-[48px] leading-[1] mb-6 font-bold text-[#F09329]">
-      Nosotros
-    </h2>
-    
-    <p class="text-[20px] leading-[1] font-bold text-[#006EB6] mb-2">
-      CORPORACIÓN CASA DE LOS SUEÑOS:
-      GESTIÓN DEL BUEN VIVIR PARA LA APROPIACIÓN DEL TERRITORIO,
-    </p>
-    
-    <p class="text-[20px] leading-[1] text-[#006EB6]">
-      Se constituye la corporación sin ánimo de lucro, de naturaleza civil de carácter privado  
-    </p>
+    <Heading variant="h2" customClass="mb-6"> Nosotros </Heading>
+
+    <Text customClass="mb-2 text-secondary" variant="bold">
+      CORPORACIÓN CASA DE LOS SUEÑOS: GESTIÓN DEL BUEN VIVIR PARA LA APROPIACIÓN
+      DEL TERRITORIO,
+    </Text>
+
+    <Text customClass="text-secondary">
+      Se constituye la corporación sin ánimo de lucro, de naturaleza civil de
+      carácter privado
+    </Text>
 
     <AboutSlider />
+
+    <Text customClass="text-secondary text-tertiary">
+      Soñamos con territorios vivos, donde el arte, la memoria y la tierra se
+      abracen. Somos una casa abierta al encuentro, al cuidado, a la
+      transformación profunda.
+    </Text>
   </div>
 </section>

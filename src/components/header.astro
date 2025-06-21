@@ -1,4 +1,7 @@
 ---
+import Heading from "./ui/text/heading.astro";
+import Text from "./ui/text/text.astro";
+
 
 ---
 
@@ -6,18 +9,18 @@
   class="w-full min-h-[100vh] bg-[#FFFDEA] flex flex-col items-center"
 >
   <img src="/icons/logo_mobile.svg" class="w-[321px] p-6" />
-  <img src="/images/header_image.png" class="" />
+  <img src="/images/header_image.png" class="" /> 
 
   <div class="w-full p-6">
-    <h3 class="text-[20px] leading-[1] font-bold text-[#F09329]">
+    <Text>
       En lo alto de las montañas de Sonsón florece un lugar donde los sueños
       germinan. La Casa de los Sueños es un abrazo al territorio, al arte y a la
       tierra
-    </h3>
+    </Text>
   </div>
 
   <!-- draw an arrow pointing down -->
-  <p src="/icons/arrow_down.svg" class="text-[40px] text-[#F09329] arrow-down">
+  <p class="text-[40px] text-[#F09329] arrow-down">
     ↓  
   <p/>
 </header>

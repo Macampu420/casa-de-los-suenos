@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+/* Kenyan Coffee - Regular */
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url("/fonts/Kenyan-Coffee-Rg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Kenyan-Coffee- Bold */
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url("/fonts/Kenyan-Coffee-Bd.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Fredoka - Regular */
+@font-face {
+  font-family: "Fredoka";
+  src: url("/fonts/Fredoka-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fredoka - Bold */
+@font-face {
+  font-family: "Fredoka";
+  src: url("/fonts/Fredoka-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Font utility classes */
+.font-kenyan {
+  font-family: "Kenyan Coffee", serif;
+}
+
+.font-fredoka {
+  font-family: "Fredoka", sans-serif;
+}
+
+@theme {
+  --color-primary: #F09329;
+  --color-secondary: #006EB6;
+  --color-tertiary: #471F47;
+}
