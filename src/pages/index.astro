@@ -4,7 +4,8 @@ import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Nav from "../components/nav.astro";
 import Main from "../components/main.astro";
-import About from "../components/about.astro";
+import About from "../components/about/about.astro";
+import { HousesTabs } from "../components/houses/tabs";
 ---
 
 <html lang="en">
@@ -16,10 +17,11 @@ import About from "../components/about.astro";
     <title>Astro</title>
   </head>
   <body class="bg-[#FFFDEA] min-h-[100px] relative pb-[50px] flex justify-center">
-    <div class="flex flex-col justify-between max-w-[390px] items-center relative">
+    <div class="flex flex-col justify-between max-w-[500px] items-center relative gap-[50px] overflow-x-hidden">
       <Header />
       <About />
-      <!-- <Footer /> -->
+      <HousesTabs client:load />
+      <Footer />
       <Nav />
     </div>
   </body>
