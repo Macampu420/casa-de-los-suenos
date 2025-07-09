@@ -4,9 +4,10 @@ type Variant = "regular" | "bold";
 export interface Props {
   variant?: Variant;
   customClass?: string;
+  style?: string;
 }
 
-const { variant = "regular", customClass = "" } = Astro.props;
+const { variant = "regular", customClass = "", style = "" } = Astro.props;
 
 // Weight classes
 const weightClasses: Record<Variant, string> = {
@@ -23,6 +24,6 @@ const classes = [defaultClasses, finalWeight, customClass]
   .join(" ");
 ---
 
-<p class={classes}>
+<p class={classes} style={style}>
   <slot />
 </p>

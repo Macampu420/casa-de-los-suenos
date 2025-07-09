@@ -1,41 +1,29 @@
 ---
 import Heading from "./ui/text/heading.astro";
 import Text from "./ui/text/text.astro";
-
-
 ---
 
-<header
-  class="w-full min-h-[100vh] bg-[#FFFDEA] flex flex-col items-center"
->
-  <img src="/icons/logo_mobile.svg" class="w-[321px] p-6" />
-  <img src="/images/header_image.png" class="" /> 
+<header class="w-full min-h-max bg-[#FFFDEA] flex flex-col items-center">
+  <img src="/images/logo-casa-suenos-texto.svg" class="w-[321px] p-6" />
 
-  <div class="w-full p-6">
-    <Text>
-      En lo alto de las montañas de Sonsón florece un lugar donde los sueños
-      germinan. La Casa de los Sueños es un abrazo al territorio, al arte y a la
-      tierra
-    </Text>
+  <div class="w-full min-h-[500px] relative">
+    <img
+      src="/images/header_image.png"
+      class="absolute w-full h-full object-cover"
+    />
+    <div class="absolute bottom-0 z-30 p-6 flex flex-col gap-4">
+      <Text
+        variant="bold"
+        customClass="text-shadow-md text-shadow-secondary text-white"
+      >
+        En Sonsón estamos construyendo el solar de los sueños, un lugar para
+        integrar los conocimientos vinculados a la tierra, el encuentro de
+        saberes colectivos, de semillas y de siembra.
+      </Text>
+
+      <Text variant="bold" customClass="text-[25px] text-shadow-md text-shadow-secondary text-white">
+        ¿Quieres tener la llave del solar?
+      </Text>
+    </div>
   </div>
-
-  <!-- draw an arrow pointing down -->
-  <p class="text-[40px] text-[#F09329] arrow-down">
-    ↓  
-  <p/>
 </header>
-
-<style>
-  .arrow-down {
-    animation: bounce 1s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(10px);
-    }
-  }
-</style>
