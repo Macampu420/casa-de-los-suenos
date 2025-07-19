@@ -1,0 +1,42 @@
+---
+import Heading from "../ui/text/heading.astro";
+import Text from "../ui/text/text.astro";
+---
+
+<article class="flex flex-col w-full">
+  <section class="relative flex flex-col justify-between h-[200px]">
+    <Heading customClass="text-[45px] mx-4">Conoce a Chocolito</Heading>
+    <img class="absolute top-[-20px] right-0" src="/images/chocolito.png" />
+    <div class="bg-primary h-[60px] w-full"></div>
+  </section>
+
+  <section class="bg-primary">
+    <Text customClass="text-white py-4 px-4">
+      Chocolito es la estrategia pedagógica para enseñar a las niñas y los niños
+      el Buen Vivir.
+      <br />
+      <br />
+      Desde el juego, la magia y las aventuras acercamos al público infantil a conocimientos
+      que nutran el alma. La siembra, la cocina, las artes, la ciencia y las historias
+      ancestrales.
+    </Text>
+  </section>
+
+  <section class="bg-primary px-4 flex flex-col">
+    <div class="flex flex-row">
+      <Text customClass="text-secondary">
+        Presiona las cartillas para <strong>descargarlas</strong>
+        <br />
+        <br />
+        ¡Ven a explora y aprende bonito, desde casa y con el corazón!
+      </Text>
+      <img class="" src="/images/chocolito-read.png" />
+    </div>
+  </section>
+
+  <section class="bg-primary justify-center flex flex-row relative gap-0">
+    <img class="z-20" src="/images/chocolito-book-1.png" />
+    <img class="z-20" src="/images/chocolito-book-2.png" />
+    <div class="z-10 absolute bottom-0 w-full bg-[#FFFDEA] h-[90px]"></div>
+  </section>
+</article>
