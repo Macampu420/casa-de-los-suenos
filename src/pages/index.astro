@@ -3,8 +3,8 @@ import "../styles/global.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
 import Nav from "../components/nav.astro";
-import Main from "../components/main.astro";
 import About from "../components/about/about.astro";
+import Chocolito from "../components/chocolito/chocolito.astro";
 import { HousesTabs } from "../components/houses/tabs";
 ---
 
@@ -16,11 +16,16 @@ import { HousesTabs } from "../components/houses/tabs";
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="bg-[#FFFDEA] min-h-[100px] relative pb-[50px] flex justify-center">
-    <div class="flex flex-col justify-between max-w-[500px] items-center relative gap-[50px] overflow-x-hidden">
+  <body
+    class="bg-[#FFFDEA] min-h-[100px] relative pb-[50px] flex justify-center"
+  >
+    <div
+      class="flex flex-col justify-between max-w-[500px] items-center relative gap-[50px] overflow-x-hidden"
+    >
       <Header />
       <About />
       <HousesTabs client:load />
+      <Chocolito />
       <Footer />
       <Nav />
     </div>
