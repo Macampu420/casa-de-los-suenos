@@ -1,0 +1,30 @@
+<section class="bg-primary justify-center flex flex-row relative gap-0">
+  <img
+    id="color-book"
+    class="z-20 max-w-[240px] cursor-pointer"
+    src="/images/chocolito-book-2.png"
+  />
+  <img
+    id="science-book"
+    class="z-20 max-w-[240px] ml-[-50px] cursor-pointer"
+    src="/images/chocolito-book-1.png"
+  />
+  <div class="z-10 absolute bottom-0 w-full bg-[#FFFDEA] h-[90px]"></div>
+</section>
+
+<script>
+  const colorBook = document.getElementById("color-book");
+  const scienceBook = document.getElementById("science-book");
+
+  colorBook?.addEventListener("click", () => {
+    alert(
+      "Acá descargaría el libro para colorear si Jhon Anderson Cardenas Acevedo me lo pasara!"
+    );
+  });
+
+  scienceBook?.addEventListener("click", () => {
+    alert(
+      "Acá descargaría el libro de ciencia si Jhon Anderson Cardenas Acevedo me lo pasara!"
+    );
+  });
+</script>

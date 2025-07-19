@@ -1,36 +1,36 @@
 ---
 const imagePaths = [
-  '/images/carrousel_1.png',
-  '/images/carrousel_2.png',
-  '/images/carrousel_3.png',
-  '/images/carrousel_4.png'
+  "/images/carrousel_1.png",
+  "/images/carrousel_2.png",
+  "/images/carrousel_3.png",
+  "/images/carrousel_4.png",
 ];
 const shuffledPaths = [...imagePaths].sort(() => Math.random() - 0.5);
 ---
 
-<section class="w-full overflow-x-scroll my-6 scrollbar-hide" id="carousel">
-  <div class="flex gap-4">
-    {shuffledPaths.map((path) => (
-      <div class="flex-shrink-0 w-[255px] h-[170px]">
-        <img
-          src={path}
-          alt="Carousel image"
-          width="255"
-          height="170"
-          class="rounded-[20px] object-cover w-full h-full pointer-events-none"
-        />
-      </div>
-    ))}
-  </div>
+<section class="px-6 flex gap-4 w-full overflow-x-scroll my-6 scrollbar-hide" id="carousel">
+    {
+      shuffledPaths.map(path => (
+        <div class="flex-shrink-0 w-[255px] h-[170px]">
+          <img
+            src={path}
+            alt="Carousel image"
+            width="255"
+            height="170"
+            class="rounded-[20px] object-cover w-full h-full pointer-events-none"
+          />
+        </div>
+      ))
+    }
 </section>
 
 <style>
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none; /* Chrome, Safari and Opera */
   }
 
   img {
@@ -44,29 +44,29 @@ const shuffledPaths = [...imagePaths].sort(() => Math.random() - 0.5);
 </style>
 
 <script>
-  const carousel = document.getElementById('carousel');
+  const carousel = document.getElementById("carousel");
   let isDown = false;
   let startX;
   let scrollLeft;
 
-  carousel.addEventListener('mousedown', (e) => {
+  carousel.addEventListener("mousedown", e => {
     isDown = true;
-    carousel.style.cursor = 'grabbing';
+    carousel.style.cursor = "grabbing";
     startX = e.pageX - carousel.offsetLeft;
     scrollLeft = carousel.scrollLeft;
   });
 
-  carousel.addEventListener('mouseleave', () => {
+  carousel.addEventListener("mouseleave", () => {
     isDown = false;
-    carousel.style.cursor = 'grab';
+    carousel.style.cursor = "grab";
   });
 
-  carousel.addEventListener('mouseup', () => {
+  carousel.addEventListener("mouseup", () => {
     isDown = false;
-    carousel.style.cursor = 'grab';
+    carousel.style.cursor = "grab";
   });
 
-  carousel.addEventListener('mousemove', (e) => {
+  carousel.addEventListener("mousemove", e => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - carousel.offsetLeft;
@@ -75,5 +75,5 @@ const shuffledPaths = [...imagePaths].sort(() => Math.random() - 0.5);
   });
 
   // Set initial cursor style
-  carousel.style.cursor = 'grab';
+  carousel.style.cursor = "grab";
 </script>
